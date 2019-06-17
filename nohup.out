@@ -1,0 +1,285 @@
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Jun 17 20:01:37 2019] ***
+compiled with version: 7.3.0 on 17 June 2019 10:23:31
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-5-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/blog_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/blog_test
+your processes number limit is 3710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 172.27.0.5:8000 fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f61f280150
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f61f280150 pid: 27412 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27412)
+spawned uWSGI worker 1 (pid: 27429, cores: 1)
+spawned uWSGI worker 2 (pid: 27430, cores: 1)
+spawned uWSGI worker 3 (pid: 27431, cores: 1)
+spawned uWSGI worker 4 (pid: 27432, cores: 1)
+[pid: 27429|app: 0|req: 1/1] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:02:03 2019] GET / => generated 3744 bytes in 566 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 27430|app: 0|req: 1/2] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:02:03 2019] GET /articles/?page=1 => generated 4746 bytes in 587 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 2/3] 117.136.63.178 () {42 vars in 770 bytes} [Mon Jun 17 20:02:04 2019] GET /articledatecount => generated 0 bytes in 5 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 27430|app: 0|req: 2/4] 117.136.63.178 () {42 vars in 772 bytes} [Mon Jun 17 20:02:04 2019] GET /articledatecount/ => generated 37 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 3/5] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:02:04 2019] GET /articles/?page=1 => generated 4746 bytes in 53 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 27432|app: 0|req: 1/6] 117.136.63.178 () {42 vars in 754 bytes} [Mon Jun 17 20:02:04 2019] GET /category => generated 0 bytes in 276 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 4/7] 117.136.63.178 () {42 vars in 756 bytes} [Mon Jun 17 20:02:04 2019] GET /category/ => generated 469 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 5/8] 171.221.142.37 () {42 vars in 835 bytes} [Mon Jun 17 20:02:28 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 6/9] 171.221.142.37 () {42 vars in 739 bytes} [Mon Jun 17 20:02:28 2019] GET /category => generated 0 bytes in 0 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 27430|app: 0|req: 3/10] 171.221.142.37 () {42 vars in 741 bytes} [Mon Jun 17 20:02:28 2019] GET /category/ => generated 469 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 27430|app: 0|req: 4/11] 171.221.142.37 () {42 vars in 781 bytes} [Mon Jun 17 20:02:28 2019] GET /favicon.ico => generated 3078 bytes in 14 msecs (HTTP/1.1 404) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 7/12] 171.221.142.37 () {42 vars in 754 bytes} [Mon Jun 17 20:02:28 2019] GET /articles/?page=1 => generated 4746 bytes in 46 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 27431|app: 0|req: 1/13] 171.221.142.37 () {42 vars in 755 bytes} [Mon Jun 17 20:02:28 2019] GET /articledatecount => generated 0 bytes in 294 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 8/14] 171.221.142.37 () {42 vars in 757 bytes} [Mon Jun 17 20:02:28 2019] GET /articledatecount/ => generated 37 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 9/15] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:03:50 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 27432|app: 0|req: 2/16] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:03:50 2019] GET /articles/?page=1 => generated 4746 bytes in 34 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 10/17] 117.136.63.178 () {42 vars in 754 bytes} [Mon Jun 17 20:03:50 2019] GET /category => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 27431|app: 0|req: 2/18] 117.136.63.178 () {42 vars in 770 bytes} [Mon Jun 17 20:03:50 2019] GET /articledatecount => generated 0 bytes in 0 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 27430|app: 0|req: 5/19] 117.136.63.178 () {42 vars in 772 bytes} [Mon Jun 17 20:03:50 2019] GET /articledatecount/ => generated 37 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 27429|app: 0|req: 11/20] 117.136.63.178 () {42 vars in 756 bytes} [Mon Jun 17 20:03:50 2019] GET /category/ => generated 469 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 27432|app: 0|req: 3/21] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:03:50 2019] GET /articles/?page=1 => generated 4746 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Jun 17 20:05:26 2019] ***
+compiled with version: 7.3.0 on 17 June 2019 10:23:31
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-5-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/blog_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/blog_test
+your processes number limit is 3710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 172.27.0.5:8000 fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56490b99d150
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56490b99d150 pid: 30235 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 30235)
+spawned uWSGI worker 1 (pid: 30238, cores: 1)
+spawned uWSGI worker 2 (pid: 30239, cores: 1)
+spawned uWSGI worker 3 (pid: 30240, cores: 1)
+spawned uWSGI worker 4 (pid: 30241, cores: 1)
+[pid: 30238|app: 0|req: 1/1] 171.221.142.8 () {44 vars in 864 bytes} [Mon Jun 17 20:05:29 2019] GET / => generated 3744 bytes in 273 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 2/2] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:05:29 2019] GET /category/ => generated 469 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 3/3] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:05:29 2019] GET /articledatecount/ => generated 37 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 1/4] 171.221.142.8 () {42 vars in 752 bytes} [Mon Jun 17 20:05:29 2019] GET /articles/?page=1 => generated 4746 bytes in 265 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 4/5] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:05:35 2019] GET /articles/?page=1 => generated 4746 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 2/6] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:05:36 2019] GET / => generated 3744 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 3/7] 117.136.63.178 () {42 vars in 754 bytes} [Mon Jun 17 20:05:36 2019] GET /category => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 5/8] 117.136.63.178 () {42 vars in 770 bytes} [Mon Jun 17 20:05:36 2019] GET /articledatecount => generated 0 bytes in 3 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 6/9] 117.136.63.178 () {42 vars in 772 bytes} [Mon Jun 17 20:05:36 2019] GET /articledatecount/ => generated 37 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 4/10] 117.136.63.178 () {42 vars in 756 bytes} [Mon Jun 17 20:05:36 2019] GET /category/ => generated 469 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30240|app: 0|req: 1/11] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:05:36 2019] GET /articles/?page=1 => generated 4746 bytes in 366 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 7/12] 171.221.142.8 () {44 vars in 864 bytes} [Mon Jun 17 20:06:23 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 5/13] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:06:23 2019] GET /articledatecount/ => generated 37 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 8/14] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:06:23 2019] GET /category/ => generated 469 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30240|app: 0|req: 2/15] 171.221.142.8 () {42 vars in 752 bytes} [Mon Jun 17 20:06:23 2019] GET /articles/?page=1 => generated 4746 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 9/16] 171.221.142.8 () {44 vars in 864 bytes} [Mon Jun 17 20:06:23 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 6/17] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:06:23 2019] GET /articledatecount/ => generated 37 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 10/18] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:06:23 2019] GET /category/ => generated 469 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30240|app: 0|req: 3/19] 171.221.142.8 () {42 vars in 752 bytes} [Mon Jun 17 20:06:23 2019] GET /articles/?page=1 => generated 4746 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 11/20] 171.221.142.8 () {44 vars in 864 bytes} [Mon Jun 17 20:06:24 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 7/21] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:06:24 2019] GET /articledatecount/ => generated 37 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 12/22] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:06:24 2019] GET /category/ => generated 469 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 13/23] 171.221.142.8 () {44 vars in 865 bytes} [Mon Jun 17 20:06:24 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 8/24] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:06:24 2019] GET /category/ => generated 469 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30240|app: 0|req: 4/25] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:06:24 2019] GET /articledatecount/ => generated 37 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30241|app: 0|req: 1/26] 171.221.142.8 () {42 vars in 752 bytes} [Mon Jun 17 20:06:24 2019] GET /articles/?page=1 => generated 4746 bytes in 284 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 14/27] 171.221.142.8 () {42 vars in 753 bytes} [Mon Jun 17 20:06:24 2019] GET /articles/?page=1 => generated 4746 bytes in 50 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 9/28] 171.221.142.8 () {44 vars in 865 bytes} [Mon Jun 17 20:06:24 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 15/30] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:06:24 2019] GET /articledatecount/ => generated 37 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 10/30] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:06:24 2019] GET /category/ => generated 469 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30240|app: 0|req: 5/31] 171.221.142.8 () {42 vars in 753 bytes} [Mon Jun 17 20:06:24 2019] GET /articles/?page=1 => generated 4746 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 16/32] 171.221.142.8 () {44 vars in 865 bytes} [Mon Jun 17 20:06:25 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 17/34] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:06:25 2019] GET /category/ => generated 469 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 30239|app: 0|req: 11/34] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:06:25 2019] GET /articledatecount/ => generated 37 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 30240|app: 0|req: 6/35] 171.221.142.8 () {42 vars in 753 bytes} [Mon Jun 17 20:06:25 2019] GET /articles/?page=1 => generated 4746 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 30238|app: 0|req: 18/36] 101.251.242.238 () {38 vars in 585 bytes} [Mon Jun 17 20:07:10 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Jun 17 20:08:21 2019] ***
+compiled with version: 7.3.0 on 17 June 2019 10:23:31
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-5-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/blog_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/blog_test
+your processes number limit is 3710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 172.27.0.5:8000 fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56439cf2d150
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56439cf2d150 pid: 32402 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 32402)
+spawned uWSGI worker 1 (pid: 32414, cores: 1)
+spawned uWSGI worker 2 (pid: 32415, cores: 1)
+spawned uWSGI worker 3 (pid: 32416, cores: 1)
+spawned uWSGI worker 4 (pid: 32417, cores: 1)
+[pid: 32414|app: 0|req: 1/1] 171.221.142.8 () {44 vars in 865 bytes} [Mon Jun 17 20:08:30 2019] GET / => generated 3744 bytes in 225 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 2/2] 171.221.142.8 () {42 vars in 753 bytes} [Mon Jun 17 20:08:30 2019] GET /articles/?page=1 => generated 4746 bytes in 54 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 1/3] 171.221.142.8 () {42 vars in 740 bytes} [Mon Jun 17 20:08:30 2019] GET /category/ => generated 469 bytes in 589 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 1/4] 171.221.142.8 () {42 vars in 756 bytes} [Mon Jun 17 20:08:30 2019] GET /articledatecount/ => generated 37 bytes in 584 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 3/5] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:08:54 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 4/6] 117.136.63.178 () {42 vars in 754 bytes} [Mon Jun 17 20:08:54 2019] GET /category => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 32416|app: 0|req: 1/7] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:08:54 2019] GET /articles/?page=1 => generated 4746 bytes in 243 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 5/8] 117.136.63.178 () {42 vars in 770 bytes} [Mon Jun 17 20:08:54 2019] GET /articledatecount => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 2/9] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:08:54 2019] GET /articles/?page=1 => generated 4746 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 6/10] 117.136.63.178 () {42 vars in 772 bytes} [Mon Jun 17 20:08:54 2019] GET /articledatecount/ => generated 37 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 2/11] 117.136.63.178 () {42 vars in 756 bytes} [Mon Jun 17 20:08:54 2019] GET /category/ => generated 469 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 3/12] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:08:56 2019] GET / => generated 3744 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 7/13] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:08:56 2019] GET /articles/?page=1 => generated 4746 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 8/14] 117.136.63.178 () {42 vars in 754 bytes} [Mon Jun 17 20:08:56 2019] GET /category => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 32416|app: 0|req: 2/15] 117.136.63.178 () {42 vars in 770 bytes} [Mon Jun 17 20:08:56 2019] GET /articledatecount => generated 0 bytes in 3 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 9/16] 117.136.63.178 () {42 vars in 756 bytes} [Mon Jun 17 20:08:56 2019] GET /category/ => generated 469 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 10/17] 117.136.63.178 () {42 vars in 772 bytes} [Mon Jun 17 20:08:56 2019] GET /articledatecount/ => generated 37 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 4/18] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:08:56 2019] GET /articles/?page=1 => generated 4746 bytes in 29 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 5/19] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:09:03 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 11/20] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:09:03 2019] GET /articles/?page=1 => generated 4746 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 6/21] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:09:03 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32416|app: 0|req: 3/22] 117.136.63.178 () {42 vars in 756 bytes} [Mon Jun 17 20:09:03 2019] GET /category/ => generated 469 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 12/23] 117.136.63.178 () {42 vars in 772 bytes} [Mon Jun 17 20:09:03 2019] GET /articledatecount/ => generated 37 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 3/24] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:09:03 2019] GET /articles/?page=1 => generated 4746 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 13/25] 14.17.21.58 () {38 vars in 610 bytes} [Mon Jun 17 20:09:19 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 14/26] 117.136.63.178 () {42 vars in 786 bytes} [Mon Jun 17 20:09:20 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 15/27] 117.136.63.178 () {40 vars in 702 bytes} [Mon Jun 17 20:09:22 2019] GET /category => generated 0 bytes in 4 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 7/28] 117.136.63.178 () {40 vars in 718 bytes} [Mon Jun 17 20:09:22 2019] GET /articledatecount => generated 0 bytes in 4 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 4/29] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:09:22 2019] GET /articles/?page=1 => generated 4746 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 8/30] 117.136.63.178 () {40 vars in 720 bytes} [Mon Jun 17 20:09:22 2019] GET /articledatecount/ => generated 37 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 16/31] 117.136.63.178 () {40 vars in 704 bytes} [Mon Jun 17 20:09:22 2019] GET /category/ => generated 469 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 17/32] 117.136.63.178 () {40 vars in 711 bytes} [Mon Jun 17 20:09:28 2019] GET /article/?id=7 => generated 2563 bytes in 29 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 18/33] 117.136.63.178 () {42 vars in 786 bytes} [Mon Jun 17 20:09:37 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32416|app: 0|req: 4/34] 117.136.63.178 () {40 vars in 702 bytes} [Mon Jun 17 20:09:37 2019] GET /category => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 5/35] 117.136.63.178 () {40 vars in 718 bytes} [Mon Jun 17 20:09:37 2019] GET /articledatecount => generated 0 bytes in 6 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 9/36] 117.136.63.178 () {40 vars in 704 bytes} [Mon Jun 17 20:09:37 2019] GET /category/ => generated 469 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32416|app: 0|req: 5/37] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:09:37 2019] GET /articles/?page=1 => generated 4746 bytes in 31 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 19/38] 117.136.63.178 () {40 vars in 720 bytes} [Mon Jun 17 20:09:37 2019] GET /articledatecount/ => generated 37 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 20/39] 117.136.63.178 () {40 vars in 801 bytes} [Mon Jun 17 20:09:39 2019] GET /articlelist/?category=%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95 => generated 131 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 21/40] 117.136.63.178 () {40 vars in 749 bytes} [Mon Jun 17 20:09:42 2019] GET /articlestime/?year=2019&month=06 => generated 1005 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 22/41] 117.136.63.178 () {40 vars in 711 bytes} [Mon Jun 17 20:09:45 2019] GET /article/?id=2 => generated 938 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 23/42] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:09:50 2019] GET /articles/?page=1 => generated 4746 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 24/43] 117.136.63.178 () {40 vars in 711 bytes} [Mon Jun 17 20:09:54 2019] GET /article/?id=7 => generated 2563 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 25/44] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:09:57 2019] GET /articles/?page=1 => generated 4746 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 26/45] 117.136.63.178 () {40 vars in 711 bytes} [Mon Jun 17 20:09:58 2019] GET /article/?id=2 => generated 938 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 27/46] 117.136.63.178 () {40 vars in 749 bytes} [Mon Jun 17 20:09:59 2019] GET /articlestime/?year=2019&month=06 => generated 1005 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 10/47] 117.136.63.178 () {40 vars in 801 bytes} [Mon Jun 17 20:09:59 2019] GET /articlelist/?category=%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95 => generated 131 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 28/48] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:10:00 2019] GET /articles/?page=1 => generated 4746 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 29/49] 171.221.142.8 () {42 vars in 753 bytes} [Mon Jun 17 20:10:09 2019] GET /articles/?page=2 => generated 1517 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 30/50] 171.221.142.8 () {42 vars in 753 bytes} [Mon Jun 17 20:10:11 2019] GET /articles/?page=3 => generated 3 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 121 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 31/51] 117.136.63.178 () {42 vars in 786 bytes} [Mon Jun 17 20:10:17 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32416|app: 0|req: 6/52] 117.136.63.178 () {40 vars in 702 bytes} [Mon Jun 17 20:10:17 2019] GET /category => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 11/53] 117.136.63.178 () {40 vars in 718 bytes} [Mon Jun 17 20:10:17 2019] GET /articledatecount => generated 0 bytes in 0 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 12/54] 117.136.63.178 () {40 vars in 704 bytes} [Mon Jun 17 20:10:17 2019] GET /category/ => generated 469 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 6/55] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:10:17 2019] GET /articles/?page=1 => generated 4746 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 32/56] 117.136.63.178 () {40 vars in 720 bytes} [Mon Jun 17 20:10:17 2019] GET /articledatecount/ => generated 37 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 33/57] 101.227.139.194 () {36 vars in 545 bytes} [Mon Jun 17 20:10:20 2019] GET / => generated 3744 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 34/58] 117.136.63.178 () {42 vars in 786 bytes} [Mon Jun 17 20:10:21 2019] GET / => generated 3744 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 32416|app: 0|req: 7/59] 117.136.63.178 () {40 vars in 702 bytes} [Mon Jun 17 20:10:21 2019] GET /category => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 7/60] 117.136.63.178 () {40 vars in 718 bytes} [Mon Jun 17 20:10:21 2019] GET /articledatecount => generated 0 bytes in 1 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 32417|app: 0|req: 13/61] 117.136.63.178 () {40 vars in 704 bytes} [Mon Jun 17 20:10:21 2019] GET /category/ => generated 469 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 32415|app: 0|req: 8/62] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:10:21 2019] GET /articles/?page=1 => generated 4746 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 35/63] 117.136.63.178 () {40 vars in 720 bytes} [Mon Jun 17 20:10:21 2019] GET /articledatecount/ => generated 37 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 36/64] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:10:32 2019] GET /articles/?page=2 => generated 1517 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 32414|app: 0|req: 37/65] 117.136.63.178 () {40 vars in 717 bytes} [Mon Jun 17 20:10:35 2019] GET /articles/?page=3 => generated 3 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 121 bytes (1 switches on core 0)
+Gracefully killing worker 4 (pid: 32417)...
+Gracefully killing worker 3 (pid: 32416)...
+Gracefully killing worker 2 (pid: 32415)...
+Gracefully killing worker 1 (pid: 32414)...
+...gracefully killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/blog_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (172.27.0.5:8000)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Jun 17 20:10:42 2019] ***
+compiled with version: 7.3.0 on 17 June 2019 10:23:31
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-0-5-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/blog_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/blog_test
+your processes number limit is 3710
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 172.27.0.5:8000 fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5564a0a10bb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5564a0a10bb0 pid: 32402 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 32402)
+spawned uWSGI worker 1 (pid: 1700, cores: 1)
+spawned uWSGI worker 2 (pid: 1701, cores: 1)
+spawned uWSGI worker 3 (pid: 1702, cores: 1)
+spawned uWSGI worker 4 (pid: 1703, cores: 1)
+[pid: 1701|app: 0|req: 1/1] 117.136.63.178 () {42 vars in 795 bytes} [Mon Jun 17 20:17:22 2019] GET / => generated 3744 bytes in 442 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 1700|app: 0|req: 1/2] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:17:22 2019] GET /articles/?page=1 => generated 4746 bytes in 464 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 1701|app: 0|req: 2/3] 117.136.63.178 () {42 vars in 770 bytes} [Mon Jun 17 20:17:23 2019] GET /articledatecount => generated 0 bytes in 2 msecs (HTTP/1.1 301) 4 headers in 137 bytes (1 switches on core 0)
+[pid: 1700|app: 0|req: 2/4] 117.136.63.178 () {42 vars in 756 bytes} [Mon Jun 17 20:17:23 2019] GET /category/ => generated 469 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 1700|app: 0|req: 3/5] 117.136.63.178 () {42 vars in 772 bytes} [Mon Jun 17 20:17:23 2019] GET /articledatecount/ => generated 37 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 1702|app: 0|req: 1/6] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:17:23 2019] GET /articles/?page=1 => generated 4746 bytes in 268 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 1700|app: 0|req: 4/7] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:17:43 2019] GET /articles/?page=2 => generated 1517 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 116 bytes (1 switches on core 0)
+[pid: 1701|app: 0|req: 3/8] 117.136.63.178 () {42 vars in 769 bytes} [Mon Jun 17 20:17:46 2019] GET /articles/?page=3 => generated 3 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 121 bytes (1 switches on core 0)

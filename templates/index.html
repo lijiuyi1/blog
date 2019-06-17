@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>李玖懿</title>
+    <link rel="stylesheet" href="/static/froala_editor/css/froala_style.min.css">
+    <link rel="stylesheet" href="/static/myblog/css/styles/tomorrow-night.css">
+    <link rel="stylesheet" href="/static/froala_editor/css/plugins/char_counter.min.css">
+    <link rel="stylesheet" href="/static/froala_editor/css/plugins/colors.min.css">
+    <link rel="stylesheet" href="/static/froala_editor/css/plugins/image.min.css">
+    <link rel="stylesheet" href="/static/froala_editor/css/plugins/emoticons.min.css">
+    <link rel="stylesheet" href="/static/froala_editor/css/plugins/table.min.css">
+    <link rel="stylesheet" href="/static/froala_editor/css/plugins/special_characters.min.css">
+    <link rel="stylesheet" href="/static/froala_editor/css/plugins/line_breaker.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" 
+        type="text/css"
+        media="all" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <link href="/static/froala_editor/css/froala_style.min.css" 
+        type="text/css" media="all"
+        rel="stylesheet">
+    <link href="/static/froala_editor/css/plugins/code_view.min.css" 
+        type="text/css" media="all"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/myblog/font/iconfont.css">
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/myblog/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/static/myblog/js/vue-router.js"></script>
+    <script defer src="/static/myblog/js/all.js"></script>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <header class='row'>
+            <div class='col-md-12 header'>赵火龙 <span class='name'>吃嘛嘛香</span></div>
+            <ol class="breadcrumb col-md-12">
+                <li>
+                    <router-link to='/'>&nbsp; / &nbsp; </router-link>
+                </li>
+                <li><a>{{$route.name}}</a></li>
+                <li v-if="$route.name == '文章'">
+                    <span>{{mydetail}}</span>
+                </li>
+                <li v-if="$route.name == '时间归档'">
+                    <span>{{ $route.params.year +"-"+$route.params.month }}</span>
+                </li>
+                <li v-if="$route.name == '分类'">
+                    <span>{{ $route.params.category }}</span>
+                </li>
+            </ol>
+        </header>
+        <div class="content row">
+            <section class='left col-md-3'>
+                <div>
+                    <span class="iconfont icon-fenlei"> 分类:</span>
+                </div>
+                <div class="category row">
+                    <category></category>
+                </div>
+                <div>
+                    <span class="iconfont icon-rili"> 时间:</span>
+                </div>
+                <div class="times row">
+                    <timeslist></timeslist>
+                </div>
+            </section>
+            <div class="view">
+                <transition name="slide-fade">
+                    <router-view>
+                    </router-view>
+                </transition>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    
+</script>
+
+
+</html>
